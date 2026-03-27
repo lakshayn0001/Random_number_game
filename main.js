@@ -19,7 +19,7 @@ const  handleClicked=()=>{
     const check =isNaN(inputValue.value) ;
     if(!check && inputValue.value <=100 && inputValue.value>0){
         let s= inputValue.value;
-        if(chances-1==1){
+        if(chances-1 === 1){
             alert("Guess Over")
             inputValue.disabled=true
             document.getElementById('btn').disabled=true
@@ -27,7 +27,9 @@ const  handleClicked=()=>{
             lefts.style.color='grey'
             console.log(arr)
             arr.forEach((e)=>{
-                resultValue.innerHTML=`Result : ${e}`    
+                resultValue.innerHTML+=`Result : Your Guess: ${e.choosen_value} | 
+                                                 Computer: ${e.correct_value} | 
+                                                 Point: ${e.point} <br>`    
             })
         }
         else{
